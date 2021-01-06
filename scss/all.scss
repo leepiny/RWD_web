@@ -1,0 +1,481 @@
+
+$primary:#AA0601;
+$dark:#5F3E2D;
+$light:#B75929;
+
+@mixin pad{
+  @media(max-width:996px){
+    @content;
+  }
+}
+@mixin mobile{
+  @media(max-width:781px){
+    @content;
+  }
+}
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+body{
+  font-family:'Roboto', sans-serif;
+}
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.2;
+}
+.font-s{
+  font-size: 14px;
+}
+.font-sm{
+  font-size: 18px;
+}
+.font-m{
+  font-size: 20px;
+}
+.font-l{
+  font-size: 24px;
+}
+.font-xl{
+  font-size: 36px;
+}
+.font-xxl{
+  font-size: 64px;
+}
+a{
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+}
+.bg-primary{
+  background: $primary;
+}
+.bg-dark{
+  background: #F2F2F2;
+}
+.text-primary{
+  color: $primary;
+}
+.text-light{
+  color: white;
+}
+.text-dark{
+  color: black;
+}
+.container{
+  max-width: 1110px;
+  margin: 0 auto;
+  @include pad{
+      max-width: 996px;
+      padding: 0 39px;
+  }
+  @include mobile{
+      max-width: 781px;
+      padding: 0 15px;
+  }
+}
+.navbar{
+  padding: 30px 88px;
+  display: flex;
+  justify-content: space-between;
+
+  .navbar-link{
+      display: flex;
+      align-items: center;
+
+      li{
+          margin-left: 54px;
+      }
+      a{
+          padding: 15px;
+      }
+  }
+  @include pad{
+      padding: 30px 30px;
+  }
+  @include mobile{
+      padding: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img{
+          padding: 10px 0;
+      }
+      .navbar-link{
+          width: 100%;
+          flex-wrap: wrap;
+
+          li{
+              margin: 0;
+              width: 50%;
+              text-align: center;
+              border: 1px solid white;
+          }
+      }
+  }
+}
+
+.content{
+  .banner{
+      background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week4/blog-4.png) center center no-repeat;
+      background-size: 100%;
+      margin-bottom: 16px;
+  }
+  .header{
+      display: flex;
+      padding-top: 214px;
+      h1{
+          font-size: 64px;
+          line-height: 90px;
+          margin-right: 24px;
+      }
+  }
+}
+.drop{
+  width: 38.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  cursor: pointer;
+
+  @include pad{
+    width: 50%;
+  }
+  @include mobile{
+    width: 100%;
+  }
+
+  .drop-mean{
+      width: 70%;
+      color:#495057;
+      position: relative;
+      transition: 0.2s;
+      border: 1px solid #CED4DA;
+      li{
+          padding: 10px;
+      }
+  }
+  .drop-mean:hover{
+    background: $primary;
+      color: white;
+
+      .drop-down-list{
+          display: block;
+      }
+  }
+  .drop-down-list{
+      background: white;
+      color: black;
+      display: block;
+      position: absolute;
+      z-index: 99;
+      left: 0;
+      top: 100%;
+      min-width: 100%;
+      display: none;
+      li{
+          padding: 10px;
+          transition: 0.2s;
+      }
+  }
+  .drop-down-list li:hover{
+      background: $primary;
+      color: white;
+  }
+}
+.main{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 16px 0;
+  margin-bottom: 32px;
+  }
+  .card{
+      width: 38%;
+      font-weight: bold;
+      border: 1px solid #00000020;
+      @include pad{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border: 0;
+        margin-bottom: 32px;
+        .photo{
+          width: 48%;
+        }
+        .text{
+          width: 48%;
+          border: 1px solid #00000020;
+        }
+      }
+      @include mobile{
+        flex-direction: column;
+        .photo{
+          width: 100%;
+        }
+        .text{
+          width: 100%;
+        }
+      }
+      // 這裡的照片大小應該要寫死高度嗎 範例中較小
+      .card-data{
+          padding: 0 24px;
+          line-height: 30px;
+
+          li{
+              display: flex;
+              align-items: center;
+              margin-bottom: 8px;
+              img{
+                width: 22px;
+                margin-right: 12px;
+              }
+          }
+      }
+      h2{
+          padding: 12px 24px;
+          margin-bottom: 16px;
+          border-bottom: 1px solid #00000020;
+      }
+
+      @include pad{
+          width: 100%;
+      }
+  }
+  .map{
+      width: 58%;
+      img{
+          width: 100%;
+      }
+      @include pad{
+        width: 100%;
+      }
+  }
+
+  .commodity{
+    .options{
+      display: flex;
+      justify-content: center;
+      font-size: 42px;
+      line-height: 55px;
+      font-weight: bold;
+
+      @include pad{
+        font-size: 18px;
+        line-height: px;
+      }
+      @include mobile{
+
+        line-height: 19px;
+      }
+
+      li{
+        width: 30%;
+        border: 1px solid #DCDCDC;
+
+        @include pad{
+          width: 33.333%;
+        }
+
+        a{
+          padding-top: 24px;
+          padding-bottom: 8px;
+          border-bottom: 16px solid transparent;
+          transition: 0.3s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img{
+            margin-right: 5px;
+          }
+        }
+        a:hover{
+          border-bottom: 15px solid $primary;
+        }
+        @include pad{
+          a{
+            border-bottom: 8px solid transparent;
+          }
+          a:hover{
+            border-bottom: 8px solid $primary;
+          }
+        }
+        @include mobile{
+          a{
+            border-bottom: 4px solid transparent;
+            img{
+              width: 3vmin;
+            }
+          }
+          a:hover{
+            border-bottom: 4px solid $primary;
+          }
+        }
+      }
+      
+    }
+    .showcase{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 88px;
+      li{
+        width: 49%;
+
+        @include pad{
+          width: 50%;
+        }
+      }
+    }
+    .productText{
+      margin-bottom: 40px;
+
+      h3{
+        font-size: 42px;
+        line-height: 63px;
+        text-align: center;
+      }
+    }
+    .product{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .product-item{
+        width: 24%;
+        margin-bottom: 104px;
+        @include pad{
+          width: 48%;
+        }
+        @include mobile{
+          width: 100%;
+        }
+        img{
+          width: 100%;
+        }
+      }
+      .model{
+        display: flex;
+        justify-content: space-between;
+        line-height: 36px;
+        font-weight: bold;
+      }
+    }
+
+    .style-dark{
+      background: $dark;
+    }
+    .style-light{
+      background: $light;
+    }
+    .model-color{
+      display: flex;
+    }
+    .style-model{
+      width: 18px;
+      height: 18px;
+      border-radius: 2px;
+      margin-right: 4px;
+    }
+  }
+  .page{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 155px;
+    li{
+      a{
+        padding: 15px;
+        color: black;
+        border: 1px solid #555555;
+      }
+      a:hover{
+        background: #000;
+        color: white;
+      }
+    }
+  }
+
+.footer{
+  padding: 30px 0;
+  .footer-link{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid white;
+      margin-bottom: 24px;
+
+      @include mobile{
+          flex-direction: row-reverse;
+          align-items: flex-start;
+      }
+
+      .footer-nav{
+          display: flex;
+          justify-content: space-between;
+          width: 40%;
+          margin-right: 48px;
+          margin-bottom: 39px;
+
+          @include mobile{
+              display: none;
+          }
+      }
+      .footer-icon{
+          display: flex;
+          justify-content: space-between;
+          width: 20%;
+          margin-bottom: 39px;
+          
+          @include mobile{
+              width: 35%;
+          }
+      }
+      .phone-mail li{
+          display: flex;
+          align-items: center;
+          margin-bottom: 26px;
+          img{
+              margin-right: 15px;
+          }
+
+          @include mobile{
+              font-size: 16px;
+          }
+      }
+  }
+  .copyright{
+      display: flex;
+      align-items: center;
+
+      .copyright-logo{
+          margin-right: 38px;
+
+          @include pad{
+              display: none;
+          }            
+      }
+      .copyright-link-ml-auto{
+          margin-left: auto;
+          margin-right: 62px;
+
+          @include mobile{
+              margin: 0;
+          }
+      }
+
+      @include mobile{
+          flex-direction: column;
+          align-items: flex-start;
+          li,.copyright-link-ml-auto{
+              margin-bottom: 7px;
+          }
+      }
+  }
+}

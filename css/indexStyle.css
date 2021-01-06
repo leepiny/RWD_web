@@ -1,0 +1,377 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    font-family:'Roboto', sans-serif;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+}
+.mb-5{
+    margin-bottom: 40px;
+}
+.mb-8{
+    margin-bottom: 64px;
+}
+.pt-8{
+    padding-top: 64px;
+}
+.text-weight{
+    font-weight: bold;
+}
+.text-dark{
+    color: #650300;
+}
+.text-light{
+    color: #FFFFFF;
+}
+.banner-p{
+    font-size: 36px;
+    line-height: 54px;
+}
+.banner-title{
+    font-size: 64px;
+    line-height: 96px;
+    font-weight: bold;
+}
+.subtitle{
+    font-size: 48px;
+    line-height: 67px;
+    text-align:center;
+    margin-bottom: 64px;
+}
+.subtitle-i{
+    font-size: 48px;
+    line-height: 63px;
+    font-style: oblique;
+    text-transform:uppercase;
+    color: #AA0601;
+    margin-left: 8px;
+}
+.subtitle-i-light{
+    font-size: 48px;
+    line-height: 63px;
+    font-style: oblique;
+    text-transform:uppercase;
+    color: white;
+    margin-left: 8px;
+}
+.subtitle-design{
+    font-size: 72px;
+    line-height: 95px;
+    color: #AA0601;
+}
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.form-container{
+    max-width: 730px;
+    margin: 0 auto;
+}
+.banner{
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png) center center;
+    min-height: calc(100vh - 109px);
+    background-size: cover;
+}
+.slogan{
+    min-height: calc(100vh - 109px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.banner-content{
+    background: #AA06010D;
+}
+.banner-text-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    text-align: center;
+    padding-bottom: 80px;
+}
+.banner-text-list li img{
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.banner-text-list li{
+    width: 20%;
+}
+.banner-list-title{
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bolder;
+}
+.banner-list-p{
+    line-height: 24px;
+} 
+.series{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.series-item{
+    margin-bottom: 32px;
+    display: flex;
+}
+.series-item span{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 0 30px;
+}
+.md-photo{
+    position: relative;
+}
+.md-d-block-font{
+    display: flex;
+    position: absolute;
+    top: 40%;
+    right: 31%;
+    display: none;
+}
+.flex-row-reverse{
+    flex-direction: row-reverse;
+}
+.reverse-text{
+    justify-content: flex-end;
+}
+.design-commodity{
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/bg.png) center center;
+    background-size: cover;
+    padding: 80px 0;
+}
+.design-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.design-item{
+   position: relative;
+   width: 49%;
+}
+.design-item::before{
+    content:"";
+    background: rgba(255, 255, 255, 0.283);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.subtitle-design{
+    position: absolute;
+    top: 40%;
+    transform: translateX(45%);
+}
+.recommend{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+.recommend-item{
+    width: 23%;
+    border: 1px solid #DEE2E6;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    font-weight: lighter;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px;
+}
+.recommend-item img{
+    width: 100%;
+}
+.recommend-text{
+    padding: 16px;
+}
+.recommend-text span{
+    font-size: 14px;
+    color: #707070;
+}
+.recommend-text p{
+    margin-bottom: 10px;
+}
+.recommend-text h5{
+    font-weight: 300;
+}
+.form{
+    background: #AA06010D;
+    text-align: center;
+}
+.form h2{
+    margin-bottom: 24px;
+}
+.form p{
+    margin-bottom: 20px;
+}
+.form-item label{
+    display: flex;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.form-item input,.form-item textarea{
+    width: 100%;
+    height: 50px; 
+    background: transparent;
+    border: 1px solid black;
+    margin-bottom: 16px;
+}
+.checkbox{
+    display: flex;
+    margin-bottom: 42px;
+    cursor: pointer;
+}
+.btn{
+    width: 45%;
+    height: 54px;
+    background: #AA0601;
+    color: #FFFFFF;
+    border: 0;
+    margin-bottom: 80px;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) { 
+    .container{
+        max-width: 992px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .form-container{
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    .banner-text-list li{
+        width: 50%;
+        margin-bottom: 78px;
+    }
+    .banner-list-p{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .recommend-item{
+        width: 49%;
+    }
+    .phone-mail-md{
+        display: none;
+    }
+    .flex-row-reverse{
+        flex-direction: row;
+    }
+    .reverse-text{
+        justify-content: flex-start;
+    }
+    .md-photo{
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container{
+        max-width: 768px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navbar a{
+        width: 100%;
+        text-align: center;
+    }
+    .banner-p{
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .banner-title{
+        font-size: 32px;
+        line-height: 72px;
+        font-weight: bold;
+    }
+    .subtitle{
+        font-size: 24px;
+        line-height: 48px;
+        text-align:center;
+        margin-bottom: 20px;
+    }
+    .subtitle-design{
+        font-size: 32px;
+        line-height: 43px;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .navbar img{
+        margin-bottom: 8px;
+    }
+    .navbar-link{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .navbar-link li{
+        margin: 0;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        border:1px solid white;
+    }
+    .navbar-link li a{
+        font-size: 20px;
+        display: block;
+        padding: 8px 54px;
+        margin: 0 auto;
+    }
+    .banner-text-list li{
+        width: 70%;
+        margin-bottom: 40px;
+        font-weight: bold;
+    }
+    .banner-text-list{
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner-list-title{
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 8px;
+    }
+    .md-photo{
+        width: 100%;
+    }
+    .series span{
+        display: none;
+    }
+    .md-d-block-font{
+        display: flex;
+        position: absolute;
+        top: 40%;
+        right: 31%;
+    }
+    .design-item{
+        width: 100%;
+        margin-bottom: 16px;
+     }
+     .subtitle-design{
+        transform: translateX(120%);
+    }
+    .recommend-item{
+        width: 100%;
+    }
+    .recommend-text h5,.recommend-text p{
+        margin-bottom: 16px;
+    }
+ }
