@@ -286,10 +286,6 @@ a{
         padding-right: 15px;
         padding-left: 15px;
     }
-    .navbar a{
-        width: 100%;
-        text-align: center;
-    }
     .banner-p{
         font-size: 16px;
         line-height: 30px;
@@ -308,32 +304,6 @@ a{
     .subtitle-design{
         font-size: 32px;
         line-height: 43px;
-    }
-    .navbar{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-    .navbar img{
-        margin-bottom: 8px;
-    }
-    .navbar-link{
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    .navbar-link li{
-        margin: 0;
-        width: 50%;
-        display: flex;
-        flex-wrap: wrap;
-        border:1px solid white;
-    }
-    .navbar-link li a{
-        font-size: 20px;
-        display: block;
-        padding: 8px 54px;
-        margin: 0 auto;
     }
     .banner-text-list li{
         width: 70%;
